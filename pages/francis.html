@@ -1,0 +1,281 @@
+<!--Actualización 04/02 
+1. Imágenes con fuente local en /assets/img
+2. Reordenación de elementos no usados
+3. Implementación de botón en el pie de página para subir al principio de la misma
+4. Carrusel de imágenes de cabecera al principio de la página 
+5. Cambio de estilo botón ver más
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarjetas web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html"><img class="logo" src="/assets/img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                            <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link " href="/pages/yanira2.html">¿Quienes somos?</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link active" href="/pages/francis.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/pages/alejandro.html">Actividades</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/pages/yanira.html">Contacto</a>
+                            </li>
+                    </ul>
+                    </div>
+                    <a href="https://wa.me/TUNUMERODETELEFONO?text=Quiero%20hacer%20una%20reserva" 
+                    class="btn btn-success whatsapp-btn" 
+                    target="_blank">
+                    <i class="bi bi-whatsapp"></i> Reserva Ahora
+                    </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex flex-column align-items-center">
+
+        <div class="container-fluid">
+        
+            <!--Carrusel de imágenes principal-->
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="/assets/img/panoramica1.webp" alt="First slide">
+                </div>
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="/assets/img/panoramica2.webp" alt="First slide">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+                </a>
+            </div>
+                
+                <!--Tarjeta #1-->
+                <div class="card tarjeta-custom tarjeta-border-primary">
+                <!--Columna imagen tarjeta-->
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-5">
+                        <img src="https://s3-static.escapadarural.com/1ffc02d9/web/images/seolandings/default.jpg" class="img-fluid rounded shadow" alt="Viaje 1" data-bs-toggle="modal" data-bs-target="#modalViaje1" style="cursor: pointer;">
+                        </div>
+                        <!--Columna información de tarjeta-->
+                        <div class="col-md-5" id="gatronomia">
+                            <h4>Gastronomía</h4>
+                            <p>Descripción para los sitios gastronómicos donde se incluya todo el contenido</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                <!--Tarjeta #2-->
+            <div class="card tarjeta-custom tarjeta-border-primary position-relative overflow-hidden">
+                <div class="row justify-content-center align-items-center flex-md-row-reverse">
+                    
+                        <!--Imagen con botón superpuesto-->
+                        <div class="col-md-6 position-relative">
+                            <div class="img-container">
+                                <img src="/assets/img/actividad1.webp" class="card-img-top" alt="actividad1" data-bs-toggle="modal" data-bs-target="#modalViaje2" style="cursor: pointer">
+                                <button class="btn btn-primary ver-mas-btn" data-bs-toggle="modal" data-bs-target="#modalViaje2">Ver más</button>
+                            </div>
+                        </div>
+                        
+                        <!--Descripción-->
+                        <div class="col-md-5">
+                                <h4>Actividades y eventos</h4>
+                                    <p>Descripción para las actividades y eventos donde se incluya todo el contenido</p>
+                        </div>  
+                </div>
+            </div>  
+    
+                <!--Tarjeta #3-->
+                <div class="card tarjeta-custom tarjeta-border-primary">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-5">
+                    <img src="/assets/img/interes1.webp" class="img-fluid rounded shadow" alt="Viaje 1">
+                    </div>
+                        <div class="col-md-5">
+                        <h4>Sitios de interés</h4>
+                        <p>Descripción para los sitios de interés donde se incluya todo el contenido</p>
+                        
+                        </div>
+                    </div>
+                </div>    
+            <a href="#" class="Tarjetaboton"><i class="bi bi-arrow-up"></i></a>
+        </div>
+    
+    <!--Modal con slider Tarjeta #1-->
+    <div class="modal fade" id="modalViaje1" tabindex="-1" aria-labelledby="modalViaje1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalViaje1Label">Gastronomía</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+    
+                    <!-- Carousel de imágenes -->
+                    <div id="carouselViaje1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/assets/img/gastronomia.webp" class="d-block w-100" alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/assets/img/gastronomia1.webp" class="d-block w-100" alt="Imagen 2">
+                            </div>
+                        </div>
+                        <!-- Controles de navegación -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselViaje1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselViaje1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <!--Modal con slider Tarjeta #2-->
+    <div class="modal fade" id="modalViaje2" tabindex="-1" aria-labelledby="modalViaje2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalViaje2Label">Actividades</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+    
+                    <!-- Carousel de imágenes -->
+                    <div id="carouselViaje2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/assets/img/actividad1.webp" class="d-block w-100" alt="Imagen 1">
+                            </div>
+                        </div>
+
+                        <!-- Controles de navegación -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselViaje1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselViaje1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+
+    </main>
+
+
+<!-- Footer -->
+<!-- Wave para la ola -->
+<div class="wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#2973B2" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,181.3C384,181,480,171,576,176C672,181,768,203,864,213.3C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+</div>
+
+<!-- Footer -->
+<footer class="text-white" >
+    <div class="container">
+        <div class="row d-flex justify-content-between align-items-center text-center">
+
+            <div class="col-12 col-md-4 d-flex justify-content-center mb-2">
+                <div class="iconos-redes d-flex gap-3">
+                    <a target="_blank" href="https://www.facebook.com/login/?locale=es_ES">
+                        <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                    <a target="_blank" href="#">
+                        <i class="bi bi-twitter"></i> Twitter
+                    </a>
+                    <a target="_blank" href="#">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 text-center mb-2">
+                <p class="mb-0">© 2025 Rutas del Sol. Todos los derechos reservados.</p>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex justify-content-center mb-2">
+                <div class="iconos-redes d-flex gap-3">
+                   <a target="_blank" href="#">Politicas de seguridad</a>
+                    <a href="/pages/yanira.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
