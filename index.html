@@ -54,24 +54,37 @@
 
 <main class="d-flex flex-column align-items-center">
 
-  <div class="text-center mb-4 btn btn-primary Tarjetaboton">
-    <h1>Tu aventura empieza con un rayo de sol</h1>
-  </div>
+  <!--<div class="text-center mb-4 btn btn-primary Tarjetaboton">-->
+    <h1 class="titulo-web">Tu aventura empieza con un rayo de sol</h1>
+  
 
   <!-- Carrusel centrado y responsive -->
   <div class="container p-3">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExample" class="carousel slide portada-carousel" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/assets/img/invierno.png" class="d-block w-100" alt="banner invierno">
+          <img src="/assets/img/verano.png" class="d-block w-100" alt="banner invierno">
         </div>
         <div class="carousel-item">
           <img src="/assets/img/primavera.png" class="d-block w-100" alt="banner primavera">
         </div>
         <div class="carousel-item">
-          <img src="/assets/img/verano.png" class="d-block w-100" alt="banner verano">
+          <img src="/assets/img/invierno.png" class="d-block w-100" alt="banner verano">
         </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
     </div>
   </div>
 
@@ -88,9 +101,9 @@
           <iframe class="card-img-top" width="560" height="315" src="https://www.youtube.com/embed/xWSqXlSf1xU?si=aCzPeiCMyBcFFXVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
           <div class="card-body">
-            <h5 class="card-title">video del profesor</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a  target="_blank" href="https://www.youtube.com/watch?v=xWSqXlSf1xU" class="btn btn-primary Tarjetaboton"> ir a YouTube</a>
+            <h5 class="Títulotarjeta">Vídeo del profesor</h5>
+            <p class="card-text">¿Alguna vez has visto un vídeo y has pensado: "¿Por qué estoy viendo esto?" Pues prepárate, porque este es uno de esos. En este emocionante episodio, nuestro profesor nos lleva de la mano en un viaje educativo lleno de datos fascinantes, explicaciones revolucionarias y... bueno, un montón de información que probablemente olvidaremos en cuanto cerremos YouTube.</p>
+            <a  target="_blank" href="https://www.youtube.com/watch?v=xWSqXlSf1xU" class="btn btn-primary Tarjetaboton"> Ir a YouTube</a>
           </div>
         </div>
       </div>
@@ -98,8 +111,11 @@
         <div class="card h-100">
           <img src="https://s3-static.escapadarural.com/1ffc02d9/web/images/seolandings/default.jpg" class="card-img-top" alt="gastronomia">
           <div class="card-body">
-            <h5 class="card-title">Descubre las mejores rutas gastronomícas</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="Títulotarjeta">Descubre las mejores rutas gastronomícas</h5>
+            <p class="card-text">Si crees que viajar es solo ver paisajes... ¡te falta la mejor parte! Prepárate para un recorrido donde la brújula no apunta al norte, sino a los mejores platos de la región.
+            Desde tapas que desafían la gravedad hasta postres que te harán llorar de felicidad, nuestras rutas gastronómicas son el sueño de cualquier amante de la buena comida.
+                      
+              Ven con hambre, porque aquí la única regla es disfrutar. ¿Listo para la experiencia más deliciosa de tu vida?. ¡Reserva tu ruta gastronómica ahora y deja que el festín comience!</p>
             <a href="/pages/francis.html" class="btn btn-primary Tarjetaboton"> Explora nuestros productos </a>
           </div>
         </div>
@@ -108,8 +124,12 @@
         <div class="card h-100">
           <img src="/assets/img/Torcal.webp" class="card-img-top" alt="rutas almeria">
           <div class="card-body">
-            <h5 class="card-title">Descubre las mejores rutas de senderismo en Almería</h5>
-            <p class="card-text">Explora los paisajes únicos de Almería</p>
+            <h5 class="Títulotarjeta">Descubre las mejores rutas de senderismo</h5>
+            <p class="card-text">Si tu plan perfecto incluye aire fresco, vistas épicas y la satisfacción de llegar a la cima sin perder la dignidad, ¡estas rutas son para ti!
+
+              Desde senderos suaves para paseos relajados hasta caminos que pondrán a prueba tus piernas (y tu paciencia), aquí encontrarás la combinación perfecta de naturaleza y aventura.
+              
+              Ponte las botas, carga la mochila y prepárate para recorrer paisajes que parecen sacados de una postal. ¿Listo para la aventura? ¡Nos vemos en el camino!</p>
             <a href="/pages/alejandro.html#almeria" class="btn btn-primary Tarjetaboton"> Explora nuestras actividades </a>
           </div>
         </div>
@@ -118,7 +138,7 @@
         <div class="card h-100">
           <img src="/assets/img/paseosPorElMundo.jpeg" class="card-img-top" alt=" rutas del mundo">
           <div class="card-body">
-            <h5 class="card-title"> Reserva tus rutas</h5>
+            <h5 class="Títulotarjeta"> Reserva tus rutas</h5>
             <p class="card-text">Es momento de que Tu aventura empiece con un rayo de sol</p>
             <a type="button" class="btn btn-primary Tarjetaboton" data-bs-toggle="modal" data-bs-target="#reservaModal">
               Reserva tu experiencia ahora
@@ -133,7 +153,7 @@
   <div class="card h-100">
       <img src="/assets/img/porElMundo.jpeg" class="card-img-top" alt="viiajes por el mundo ">
       <div class="card-body">
-          <h5 class="card-title">Reserva tus vuelos</h5>
+          <h5 class="Títulotarjeta">Reserva tus vuelos</h5>
           <p class="card-text">Estas a un click de empiezar tu aventura.</p>
           <a type="button" class="btn btn-primary Tarjetaboton" data-bs-toggle="modal" data-bs-target="#reservaModal">
               Reserva tu experiencia ahora
@@ -248,12 +268,13 @@
           </div>
       </div>
   </div>
+
 </footer>
   
 <!-- JS -->
+  
 <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
-<script defer src="/js/reserva.js" ></script>
+<script defer src="/js/reserva.js"></script>
 </body>
 </html>

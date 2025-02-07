@@ -2,7 +2,60 @@ body {
     background-color: #F2EFE7;
     font-family: "Roboto", serif;
     overflow-y: auto;
+    cursor: url('/assets/img/navegacion\ \(1\).png'), auto;
 }
+
+.titulo-web {
+    font-size: 4.5rem; 
+    font-weight: 900; 
+    text-align: center;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #FF9800, #FF5722); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+    animation: fadeInTitle 1.5s ease-in-out, glow 1.5s infinite alternate;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de brillo */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 8px rgba(255, 152, 0, 0.3);
+    }
+    100% {
+        text-shadow: 4px 4px 16px rgba(255, 87, 34, 0.6);
+    }
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .titulo-web {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-web {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+}
+
 
 /* Contenedor de las hojas */
 
@@ -187,6 +240,18 @@ body::-webkit-scrollbar-thumb:hover {
         top:30%;
     }
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to bottom, #FFFFFF, #F2EFE7);
+}
+
 
 .Tarjeta {
     display: flex;
@@ -442,6 +507,10 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(-2px);
 }
 
+
+
+
+
 /* Efectos imagenes modal*/
 .modal-body .imagen-con-hover {
     width: 100%;
@@ -517,6 +586,8 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(-50%);
     position: absolute;
 }
+
+
 
 .carousel-caption {
     position: relative;
@@ -997,4 +1068,118 @@ img {
 
 .whatsapp-btn i {
     font-size: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+.Tarjetaboton {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .titulo-web {
+        font-size: 2.5rem;
+    }
+
+    .card-body {
+        text-align: center;
+    }
+}
+
+/* Ajustes generales del carrusel */
+.portada-carousel-item img {
+    border-radius: 15px;
+    height: auto;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Mejora de visibilidad en los controles del slider */
+.portada-carousel .carousel-control-prev, 
+.portada-carousel .carousel-control-next {
+    width: 50px; 
+    height: 50px;
+    background-color: rgba(252, 249, 249, 0.5); 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para mejorar visibilidad */
+.portada-carousel .carousel-control-prev:hover, 
+.portada-carousel .carousel-control-next:hover {
+    background-color: rgba(36, 34, 34, 0.8);
+    transform: scale(1.1); 
+}
+
+/* Aumentar el tamaño de los íconos de navegación */
+.portada-carousel .carousel-control-prev-icon, 
+.portada-carousel .carousel-control-next-icon {
+    width: 30px; 
+    height: 30px;
+    filter: invert(1); 
+}
+
+
+/* Indicadores solo para el carrusel de la portada */
+.portada-carousel .carousel-indicators button {
+    background-color: #48A6A7;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border: none;
+}
+
+.portada-carousel .carousel-indicators .active {
+    background-color: #2973B2;
+    width: 14px;
+    height: 14px;
+}
+
+.portada-carousel .carousel-indicators {
+    position: absolute;
+    bottom: -19px; /* Baja los puntos */
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Responsividad solo para el carrusel de la portada */
+@media (max-width: 768px) {
+    .portada-carousel .carousel-item img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portada-carousel .carousel-item img {
+        max-height: 200px;
+    }
 }
